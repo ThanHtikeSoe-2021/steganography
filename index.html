@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Steganography Project</title>
+  <!--css linked-->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="background_html">
+
+
+    <div id="header">
+      <h1>Steganography-Hide Your Image</h1>
+    </div>
+    <!--canvas division-->
+    <div class="notice_text">
+      <h3>Note: This tool is best suitable with Pc.</h3> <br>
+      <h3>Both images should have the same dimension [Eg-Portrait to Portrait].</h3> <br>
+      <h3>Click "Adjust Dimension" button to adjust size!</h3>
+      <br>
+    </div>
+    <div class="canvas_div">
+      <canvas id="canvas1"></canvas>
+      <canvas id="canvas2"></canvas>
+    </div>
+    <!--file input division-->
+    <div class="fileinput_div">
+      <h3 class="mobileText1">Hide this image</h3>
+      <input id="image1" type="file" accept="image/*" multiple="false" onchange="loadHiddenImage()">
+
+
+      <h3 class="mobileText2">Into this image</h3>
+      <input id="image2" type="file" accept="image/*" multiple="false" onchange="loadHostImage()">
+    </div>
+
+    <input id="dime1" type="button" value="Adjust Dimension" onclick="fgDimensions()" /><span id="fun1"></span>
+    <span id="fun2"></span>
+    <!--button division-->
+    <div class="button_div">
+
+      <input type="button" id="btn1" class="btn_1 " value="Start Steganography" onclick="startOp()">
+      <input type="button" id="btn2" class="btn resetBtn" value="Reset" onclick="clearCanvas()">
+    </div>
+
+    <div class="result_text">
+      <h4 class="mobileText3" style="color:darkblue;margin:20px 50px 0px 50px;">review image to be hidden:</h4>
+      <h4 class="hidetext2" style="color:darkblue;margin:20px 50px 0px 150px;">Steganographic Photo :</h4>
+    </div>
+    <div class="canvas_div">
+      <canvas id="canvas3"></canvas>
+      <canvas id="canvas4"></canvas>
+
+    </div>
+    <p class="hidetext1"> Get Your Steganographic Photo :)</p>
+    <div class="instruction_text">
+      <p>How to download the result image?</p>
+      <p>Instruction:</p>
+      <p>(1)Right click on the image.</p>
+      <p>(2)Save Image As</p>
+      <p>(3)Save the image into your device.</p>
+    </div>
+  </div>
+
+  <!--Extruction Division-->
+  <div class="background_html">
+    <div class="notice_text">
+      <h2 style="text-align:center;">Extract Image!</h2>
+    </div>
+    <br>
+      <h4 class="extractText1">Extract From:</h4>
+        <input id="image3" type="file" accept="image/*" multiple="false" onchange="loadSteganoImage()">
+    <!--canvas division-->
+    <div class="canvas_div">
+      <canvas id="canvas5"></canvas>
+
+        <h4 class="extractText2">Your Hidden Image is:</h4>
+      <canvas id="canvas6"></canvas>
+    </div>
+    <!--file input division-->
+    <div class="fileinput_div">
+
+
+    </div>
+    <!--button division-->
+    <div class="button_div">
+
+      <input type="button" id="btn3" class="btn_3 " value="Start Extraction" onclick="extractImage()">
+      <input type="button" id="btn4" class="btn resetBtn" value="Reset" onclick="resetCanvas()">
+      <br>
+      <p class="hidetext2"> Get Your Hidden Photo ! :) </p>
+    </div>
+
+    <div class="instruction_text">
+      <p>How to download the result image?</p>
+      <p>Instruction:</p>
+      <p>(1)Right click on the image.</p>
+      <p>(2)Save Image As</p>
+      <p>(3)Save the image into your device.</p>
+    </div>
+  </div>
+  </div>
+
+<!--Bottom division-->
+  <div class="bottom_div">
+    <p style='color:white;'>created by Than Htike Soe <em>linkedin : </em><a style="color:yellow;" href="https://www.linkedin.com/in/thanhtikesoe/">www.linkedin.com/in/thanhtikesoe/</a></p>
+    <a href="https://thanhtikesoe-2021.github.io/resume/">
+      <p style="color:white;">About Me</p>
+    </a>
+    <p style='color:white;'>@copyright 2021</p>
+
+    <div class="animation">
+      <img class="gifImage" src="https://i.pinimg.com/originals/90/b9/92/90b9927d82db5805e197c54ca83c470c.gif" alt="About Me">
+    </div>
+  </div>
+
+
+  <!-- Javascript linked-->
+  <script src="js/script.js" type="text/javascript"></script>
+  <script src="http://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js" type="text/javascript"></script>
+
+
+</body>
+
+</html>
